@@ -129,7 +129,7 @@ class Text(Block):
     def __init__(self):
         super(Text, self).__init__()
         self.fake = Faker()
-        self.fonts = glob.glob("/workspace/post-generator/asset/fonts_en/**/*.ttf")
+        self.fonts = glob.glob("/workspace/mmdetection/my_dataset/fonts_en/**/*.ttf")
         self.param_space = [
             ("i_font", lambda *args: np.random.randint(0, len(self.fonts), 1)[0]),
             ("textsize", lambda *args: int(np.random.normal(12, 3, 1)[0])),

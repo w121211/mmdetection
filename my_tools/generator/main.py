@@ -33,7 +33,7 @@ if __name__ == "__main__":
     os.makedirs(os.path.join(opt.save_to, "annotations"), exist_ok=True)
 
     rect = bk.Rectangle()
-    jpg = bk.Photo("/tf/CoordConv-pytorch/data/facebook")
+    jpg = bk.Photo("/workspace/CoordConv-pytorch/data/facebook")
     text = bk.Text()
     bg = bk.Background(
         [bk.Rectangle()]
