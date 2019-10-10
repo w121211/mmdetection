@@ -34,6 +34,7 @@ CATEGORIES = [
     {"id": 1, "name": "Rectangle", "supercategory": "shape"},
     {"id": 2, "name": "Text", "supercategory": "shape"},
     {"id": 3, "name": "Background", "supercategory": "shape"},
+    {"id": 4, "name": "Photo", "supercategory": "shape"},
 ]
 
 

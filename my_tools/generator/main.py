@@ -33,16 +33,19 @@ if __name__ == "__main__":
     os.makedirs(os.path.join(opt.save_to, "annotations"), exist_ok=True)
 
     rect = bk.Rectangle()
-    jpg = bk.Photo("/workspace/CoordConv-pytorch/data/facebook")
+    jpg = bk.Photo("/workspace/CoordConv/data/flickr")
     text = bk.Text()
     bg = bk.Background(
-        [bk.Rectangle()]
-        # [bk.Rectangle(), bk.Photo("/tf/CoordConv-pytorch/data/facebook")]
+        [bk.Rectangle(), bk.Photo("/workspace/CoordConv/data/flickr")]
     )
 
     samplers = [
-        Sampler([bg, rect, text], opt),
-        Sampler([bg, rect, rect, text], opt),
+        Sampler([bg, jpg, rect, text], opt),
+        Sampler([bg, rect, jpg, text], opt),
+        Sampler([bg, jpg, rect, rect, text], opt),
+        Sampler([bg, rect, jpg, rect, text], opt),
+        Sampler([bg, rect, rect, jpg, text], opt),
+        
         Sampler([bg, rect, text, rect], opt),
     ]
     # samplers = [Sampler([bg, rect], opt)]

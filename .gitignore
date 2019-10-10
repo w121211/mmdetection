@@ -121,3 +121,4 @@ work_dirs/
 
 # my
 my_dataset
+.DS_Store
